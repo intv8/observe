@@ -1,4 +1,10 @@
 {
+  "name": "observe",
+  "description": "Features supporting the observer pattern.",
+  "version": "0.0.1",
+  "author": "integereleven",
+  "license": "MIT",
+  "status": "unstable",
   "lint": {
     "rules": {
       "tags": [
