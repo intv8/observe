@@ -1,0 +1,212 @@
+[
+  {
+    "kind": "variable",
+    "name": "VERSION",
+    "location": {
+      "filename": "file:///C:/repos/intv8/observe/src/version.ts",
+      "line": 11,
+      "col": 13
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "The current release version of the intv8 observe package."
+    },
+    "variableDef": {
+      "tsType": {
+        "repr": "0.0.1",
+        "kind": "literal",
+        "literal": {
+          "kind": "string",
+          "string": "0.0.1"
+        }
+      },
+      "kind": "const"
+    }
+  },
+  {
+    "kind": "interface",
+    "name": "TObservable",
+    "location": {
+      "filename": "file:///C:/repos/intv8/observe/src/types/interfaces.ts",
+      "line": 13,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Provides a mechanism to push notifications to subscribed {@link TObserver} instances."
+    },
+    "interfaceDef": {
+      "extends": [],
+      "methods": [
+        {
+          "name": "subscribe",
+          "kind": "method",
+          "location": {
+            "filename": "file:///C:/repos/intv8/observe/src/types/interfaces.ts",
+            "line": 15,
+            "col": 2
+          },
+          "jsDoc": {
+            "doc": "Subscribe a {@link TObserver} to push notifications, returning an `IDisposable` to unsubscribe."
+          },
+          "optional": false,
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "observer",
+              "optional": false,
+              "tsType": {
+                "repr": "TObserver",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": [
+                    {
+                      "repr": "T",
+                      "kind": "typeRef",
+                      "typeRef": {
+                        "typeParams": null,
+                        "typeName": "T"
+                      }
+                    }
+                  ],
+                  "typeName": "TObserver"
+                }
+              }
+            }
+          ],
+          "returnType": {
+            "repr": "IDisposable",
+            "kind": "typeRef",
+            "typeRef": {
+              "typeParams": null,
+              "typeName": "IDisposable"
+            }
+          },
+          "typeParams": []
+        }
+      ],
+      "properties": [],
+      "callSignatures": [],
+      "indexSignatures": [],
+      "typeParams": [
+        {
+          "name": "T"
+        }
+      ]
+    }
+  },
+  {
+    "kind": "interface",
+    "name": "TObserver",
+    "location": {
+      "filename": "file:///C:/repos/intv8/observe/src/types/interfaces.ts",
+      "line": 19,
+      "col": 0
+    },
+    "declarationKind": "export",
+    "jsDoc": {
+      "doc": "Provides a mechanism to receive push notifications from a {@link TObservable}."
+    },
+    "interfaceDef": {
+      "extends": [],
+      "methods": [
+        {
+          "name": "next",
+          "kind": "method",
+          "location": {
+            "filename": "file:///C:/repos/intv8/observe/src/types/interfaces.ts",
+            "line": 21,
+            "col": 2
+          },
+          "jsDoc": {
+            "doc": "Receive a push notification with new data from a {@link TObservable}."
+          },
+          "optional": false,
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "value",
+              "optional": false,
+              "tsType": {
+                "repr": "T",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "T"
+                }
+              }
+            }
+          ],
+          "returnType": {
+            "repr": "void",
+            "kind": "keyword",
+            "keyword": "void"
+          },
+          "typeParams": []
+        },
+        {
+          "name": "error",
+          "kind": "method",
+          "location": {
+            "filename": "file:///C:/repos/intv8/observe/src/types/interfaces.ts",
+            "line": 24,
+            "col": 2
+          },
+          "jsDoc": {
+            "doc": "Receive a notification from a {@link TObservable} that an error has occurred."
+          },
+          "optional": false,
+          "params": [
+            {
+              "kind": "identifier",
+              "name": "error",
+              "optional": false,
+              "tsType": {
+                "repr": "Error",
+                "kind": "typeRef",
+                "typeRef": {
+                  "typeParams": null,
+                  "typeName": "Error"
+                }
+              }
+            }
+          ],
+          "returnType": {
+            "repr": "void",
+            "kind": "keyword",
+            "keyword": "void"
+          },
+          "typeParams": []
+        },
+        {
+          "name": "complete",
+          "kind": "method",
+          "location": {
+            "filename": "file:///C:/repos/intv8/observe/src/types/interfaces.ts",
+            "line": 27,
+            "col": 2
+          },
+          "jsDoc": {
+            "doc": "Receive a notification from a {@link TObservable} that it has finished sending notifications."
+          },
+          "optional": false,
+          "params": [],
+          "returnType": {
+            "repr": "void",
+            "kind": "keyword",
+            "keyword": "void"
+          },
+          "typeParams": []
+        }
+      ],
+      "properties": [],
+      "callSignatures": [],
+      "indexSignatures": [],
+      "typeParams": [
+        {
+          "name": "T"
+        }
+      ]
+    }
+  }
+]
